@@ -26,7 +26,7 @@ jobs:
         uses: akshay-online/aic-budget@v0.0.2-alpha
         with:
           # Path to the Excel budgets file
-          budgets_file: 'budgets.xlsx'
+          budgets_file: 'budgets.csv'
           # GitHub Enterprise Slug
           enterprise_slug: 'ecanarys'
           # GitHub API Version
