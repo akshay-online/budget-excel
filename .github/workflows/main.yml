@@ -1,0 +1,6 @@
+- name: Sync Budgets
+  uses: akshay-online/aic-budget@v0.0.1-alpha
+  with:
+    budgets_file: 'budgets.xlsx'
+    enterprise_slug: 'ecanarys'
+    github_token: ${{ secrets.ENTERPRISE_BILLING_TOKEN }}
