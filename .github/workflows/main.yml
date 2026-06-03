@@ -22,9 +22,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - name: Sync Budgets
+      - name: GitHub Enterprise User Budget Sync
         uses: akshay-online/aic-budget@v0.0.1-alpha
         with:
+          # Path to the Excel budgets file
           budgets_file: 'budgets.xlsx'
+          # GitHub Enterprise Slug
           enterprise_slug: 'ecanarys'
+          # GitHub API Version
+          api_version: # default is 2026-03-10
+          # Personal Access Token with enterprise billing permissions
           github_token: ${{ secrets.ENTERPRISE_BILLING_TOKEN }}
