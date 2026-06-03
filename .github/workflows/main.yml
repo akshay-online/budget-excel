@@ -30,6 +30,6 @@ jobs:
           # GitHub Enterprise Slug
           enterprise_slug: 'ecanarys'
           # GitHub API Version
-          api_version: # default is 2026-03-10
+          api_version: '2026-03-10'
           # Personal Access Token with enterprise billing permissions
           github_token: ${{ secrets.ENTERPRISE_BILLING_TOKEN }}
