@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: GitHub Enterprise User Budget Sync
-        uses: akshay-online/aic-budget@v1
+        uses: akshay-online/aic-budget@latest
         with:
           # Path to the Excel budgets file
           budgets_file: 'budgets.csv'
