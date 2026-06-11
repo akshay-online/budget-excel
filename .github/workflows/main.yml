@@ -1,40 +1,23 @@
-name: Budgets Allocation
-# Controls when the workflow will run
+name: Budget Allocation
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
-  # pull_request:
-    # branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  Budgetting:
-    # The type of runner that the job will run on
+  Budget-allocation:
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # - name: GitHub Enterprise User Budget Sync
-      #  uses: akshay-online/aic-budget@v1.0.
       - name: Automate GitHub Copilot User Budget
         uses: CanarysAutomations/Automate-GitHub-Copilot-User-Budget@v1.1
         # uses: CanarysAutomations/Automate-GitHub-Copilot-User-Budget@aksh/v1.1
         with:
-          # Path to the Excel budgets file
           budgets_file: 'budgets.csv'
-          # GitHub Enterprise Slug
           enterprise_slug: 'ecanarys'
-          # GitHub API Version
           api_version: '2026-03-10'
-          # Personal Access Token with enterprise billing permissions
           github_token: ${{ secrets.ENTERPRISE_BILLING_TOKEN }}
       
       - name: Upload Budget Reports
