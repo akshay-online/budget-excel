@@ -25,8 +25,8 @@ jobs:
       # - name: GitHub Enterprise User Budget Sync
       #  uses: akshay-online/aic-budget@v1.0.
       - name: Automate GitHub Copilot User Budget
-        # uses: CanarysAutomations/Automate-GitHub-Copilot-User-Budget@v1
-        uses: CanarysAutomations/Automate-GitHub-Copilot-User-Budget@aksh/v1.1
+        uses: CanarysAutomations/Automate-GitHub-Copilot-User-Budget@v1.1
+        # uses: CanarysAutomations/Automate-GitHub-Copilot-User-Budget@aksh/v1.1
         with:
           # Path to the Excel budgets file
           budgets_file: 'budgets.csv'
